@@ -16,15 +16,21 @@
     <div class="form-group">
         {{ Form::label('name', 'Name') }}
         {{ Form::text('name', '', array('class' => 'form-control')) }}
-    </div><br>
+    </div>
+    <br>
 
-    <h4>Assign Permission to Roles</h4>
+    @if(!$roles->isEmpty())
 
-    @foreach ($roles as $role) 
-        {{ Form::checkbox('roles[]',  $role->id ) }}
-        {{ Form::label($role->name, ucfirst($role->name)) }}<br>
+        <h4>Assign Permission to Roles</h4>
 
-    @endforeach
+        @foreach ($roles as $role) 
+            {{ Form::checkbox('roles[]',  $role->id ) }}
+            {{ Form::label($role->name, ucfirst($role->name)) }}<br>
+
+        @endforeach
+
+    @endif
+    
     <br>
     {{ Form::submit('Add', array('class' => 'btn btn-primary')) }}
 
