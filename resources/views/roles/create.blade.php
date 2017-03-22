@@ -8,7 +8,7 @@
 
     <h1><i class='fa fa-key'></i> Add Role</h1>
     <hr>
-    @include ('errors.list')
+    {{-- @include ('errors.list') --}}
 
     {{ Form::open(array('url' => 'roles')) }}
 

@@ -6,7 +6,7 @@
 
 <div class='col-lg-4 col-lg-offset-4'>
 
-    @include ('errors.list')
+    {{-- @include ('errors.list') --}}
 
     <h1><i class='fa fa-key'></i> Add Permission</h1>
     <br>

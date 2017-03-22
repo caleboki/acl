@@ -8,8 +8,10 @@
 
         <h1>Create New Post</h1>
         <hr>
-        @include ('errors.list')
-        {{ Form::open(array('route' => 'posts.store')) }}
+        {{-- @include ('errors.list') --}}
+
+        {{-- Using the Laravel HTML Form Collective to create our form --}}
+        {{ Form::open(array('route' => 'posts.store')) }} 
 
         <div class="form-group">
             {{ Form::label('title', 'Title') }}

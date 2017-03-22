@@ -9,7 +9,7 @@
     <h1><i class='fa fa-user-plus'></i> Add User</h1>
     <hr>
 
-    @include ('errors.list')
+    {{-- @include ('errors.list') --}}
 
     {{ Form::open(array('url' => 'users')) }}
 
