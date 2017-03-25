@@ -94,7 +94,9 @@ class PermissionController extends Controller
      */
     public function edit($id)
     {
-        return redirect('permissions');
+        $permission = Permission::find($id);
+        
+        return view('permissions.edit', compact('permission'));
     }
 
     /**
