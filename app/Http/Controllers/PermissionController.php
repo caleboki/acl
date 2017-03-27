@@ -131,6 +131,13 @@ class PermissionController extends Controller
     public function destroy($id)
     {
         $permission = Permission::findOrFail($id);
+        
+        if ($permission->name == "Administer roles & permissions") {
+            return redirect()->route('permissions.index')
+            ->with('flash_message',
+             'Cannot delete this Permission!');
+        }
+        
         $permission->delete();
 
         return redirect()->route('permissions.index')
